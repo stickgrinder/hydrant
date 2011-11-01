@@ -43,7 +43,7 @@ class Hydrant
     $this->_initialize_config($config);
     
     // initalize h2o object
-    require('../vendor/h2o-php/h2o.php');
+    require(SPARKPATH.'hydrant/vendor/h2o-php/h2o.php');
   }
 
   /**
