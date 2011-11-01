@@ -1,0 +1,7 @@
+# Info file for Hydrant 1.x Spark by @stickgrinder (Paolo Pustorino)
+# This Spark is sponsored by Agavee (http://www.agavee.com)
+
+name: Hydrant
+version: 1.0.0
+compatibility: 2.0.3
+tags: ["template", "template engine", "h2o", "views", "django", "ruby"]
