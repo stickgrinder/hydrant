@@ -1,0 +1,37 @@
+<?php  if (! defined('BASEPATH')) exit('No direct script access allowed');
+
+/**
+ * Hydrant Custom Loader Class
+ *
+ * This loader allows you to load Hydrant (H2O) templates as you do with
+ * standard CI views. Refer to README file for more information.
+ *
+ * @package		Hydrant
+ * @subpackage	Libraries
+ * @author		Paolo Pustorino <stickgrinder@gmail.com>
+ * @category	Loader
+ * @filesource
+ */
+
+class MY_Loader extends CI_Loader
+{
+
+	public function view($view, $vars = array(), $return = FALSE)
+	{
+        // TODO: chain output from view parser into Hydrant so you could combine the two
+        if (FALSE !== strpos($view, '.htpl'))
+        {
+            $CI =& get_instance();
+            $CI->load->library('hydrant');
+            return $CI->hydrant->render($view, $vars, $return);
+        }
+        else
+		  return $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_object_to_array($vars), '_ci_return' => $return));
+	}
+
+}
+
+// --------------------------------------------------------------------
+/**
+ * End of MY_Loader.php (Hydrant version)
+**/
