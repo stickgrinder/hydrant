@@ -7,7 +7,8 @@
 ### Library version
 
 * Clone this repo or download it as ZIP archive.
-* Copy config/hydrant.php in your application/config folder
+* Copy content of the `libraries` folder in your `application/libraries` folder
+* Copy `config/hydrant.php` in your `application/config` folder
 
 You're done, load Hydrant as usual:
 
